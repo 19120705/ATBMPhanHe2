@@ -21,12 +21,14 @@ namespace WindowsFormsApp1.DAO
         }
         public int ThucThi(string sql)
         {
+
             OracleConnection conn = DBUtils.GetDBConnection(Info.NAME, Info.PASSWORD);
-            OracleCommand cmd = new OracleCommand(sql,conn);
+            OracleCommand cmd = new OracleCommand(sql, conn);
             conn.Open();
-            var kq=cmd.ExecuteNonQuery();
+            var kq = cmd.ExecuteNonQuery();
             conn.Close();
             return kq;
+
         }
     }
 }

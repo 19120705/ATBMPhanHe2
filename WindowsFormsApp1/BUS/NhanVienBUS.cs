@@ -15,6 +15,10 @@ namespace WindowsFormsApp1.BUS
         {
             return nvDao.LayDuLieu();
         }
+        public DataTable LayVaiTro(string manv)
+        {
+            return nvDao.LayVaiTro(manv);
+        }
         public int Them(NHANVIEN nv)
         {
             return nvDao.Them(nv);

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class PhanHe1
     {
         /// <summary>
         /// Required designer variable.
@@ -47,10 +47,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textEditUser = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textDropName = new System.Windows.Forms.TextBox();
             this.textCrePassword = new System.Windows.Forms.TextBox();
             this.textCreUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,10 +57,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEditRolename = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textDropRolename = new System.Windows.Forms.TextBox();
             this.textRolename = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -72,6 +64,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.btnTable = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -102,6 +95,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnTable);
             this.tabPage1.Controls.Add(this.textRole);
             this.tabPage1.Controls.Add(this.textDanhsach);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -112,7 +106,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách người dùng";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // textRole
             // 
@@ -143,7 +136,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(785, 350);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabPage2
             // 
@@ -285,10 +277,6 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.label4);
-            this.tabPage6.Controls.Add(this.textEditUser);
-            this.tabPage6.Controls.Add(this.label3);
-            this.tabPage6.Controls.Add(this.textDropName);
             this.tabPage6.Controls.Add(this.textCrePassword);
             this.tabPage6.Controls.Add(this.textCreUsername);
             this.tabPage6.Controls.Add(this.label2);
@@ -306,39 +294,6 @@
             this.tabPage6.Text = "User";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(307, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "User name";
-            // 
-            // textEditUser
-            // 
-            this.textEditUser.Location = new System.Drawing.Point(398, 190);
-            this.textEditUser.Name = "textEditUser";
-            this.textEditUser.Size = new System.Drawing.Size(216, 22);
-            this.textEditUser.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(307, 334);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "User name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textDropName
-            // 
-            this.textDropName.Location = new System.Drawing.Point(398, 331);
-            this.textDropName.Name = "textDropName";
-            this.textDropName.Size = new System.Drawing.Size(216, 22);
-            this.textDropName.TabIndex = 13;
-            // 
             // textCrePassword
             // 
             this.textCrePassword.Location = new System.Drawing.Point(398, 79);
@@ -353,7 +308,6 @@
             this.textCreUsername.Name = "textCreUsername";
             this.textCreUsername.Size = new System.Drawing.Size(216, 22);
             this.textCreUsername.TabIndex = 11;
-            this.textCreUsername.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // label2
             // 
@@ -372,7 +326,6 @@
             this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "User name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button11
             // 
@@ -386,9 +339,9 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(633, 331);
+            this.button8.Location = new System.Drawing.Point(398, 246);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(138, 23);
+            this.button8.Size = new System.Drawing.Size(138, 70);
             this.button8.TabIndex = 7;
             this.button8.Text = "Drop User";
             this.button8.UseVisualStyleBackColor = true;
@@ -396,9 +349,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(633, 190);
+            this.button4.Location = new System.Drawing.Point(398, 141);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 23);
+            this.button4.Size = new System.Drawing.Size(138, 70);
             this.button4.TabIndex = 6;
             this.button4.Text = "Edit User";
             this.button4.UseVisualStyleBackColor = true;
@@ -423,14 +376,9 @@
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(281, 304);
             this.dataGridView4.TabIndex = 4;
-            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // tabPage7
             // 
-            this.tabPage7.Controls.Add(this.label5);
-            this.tabPage7.Controls.Add(this.textEditRolename);
-            this.tabPage7.Controls.Add(this.label6);
-            this.tabPage7.Controls.Add(this.textDropRolename);
             this.tabPage7.Controls.Add(this.textRolename);
             this.tabPage7.Controls.Add(this.label8);
             this.tabPage7.Controls.Add(this.button9);
@@ -445,38 +393,6 @@
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Role";
             this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(301, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Role name";
-            // 
-            // textEditRolename
-            // 
-            this.textEditRolename.Location = new System.Drawing.Point(392, 184);
-            this.textEditRolename.Name = "textEditRolename";
-            this.textEditRolename.Size = new System.Drawing.Size(216, 22);
-            this.textEditRolename.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(301, 321);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 16);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Role name";
-            // 
-            // textDropRolename
-            // 
-            this.textDropRolename.Location = new System.Drawing.Point(392, 318);
-            this.textDropRolename.Name = "textDropRolename";
-            this.textDropRolename.Size = new System.Drawing.Size(216, 22);
-            this.textDropRolename.TabIndex = 21;
             // 
             // textRolename
             // 
@@ -496,7 +412,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(56, 17);
+            this.button9.Location = new System.Drawing.Point(19, 23);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 23);
             this.button9.TabIndex = 13;
@@ -506,9 +422,9 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(614, 317);
+            this.button10.Location = new System.Drawing.Point(439, 289);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(138, 23);
+            this.button10.Size = new System.Drawing.Size(138, 70);
             this.button10.TabIndex = 12;
             this.button10.Text = "Drop Role";
             this.button10.UseVisualStyleBackColor = true;
@@ -516,9 +432,9 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(614, 183);
+            this.button12.Location = new System.Drawing.Point(439, 173);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(138, 23);
+            this.button12.Size = new System.Drawing.Size(138, 70);
             this.button12.TabIndex = 11;
             this.button12.Text = "Edit Role";
             this.button12.UseVisualStyleBackColor = true;
@@ -526,9 +442,9 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(614, 28);
+            this.button13.Location = new System.Drawing.Point(439, 62);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(138, 23);
+            this.button13.Size = new System.Drawing.Size(138, 70);
             this.button13.TabIndex = 10;
             this.button13.Text = "Create Role";
             this.button13.UseVisualStyleBackColor = true;
@@ -544,13 +460,23 @@
             this.dataGridView5.Size = new System.Drawing.Size(291, 320);
             this.dataGridView5.TabIndex = 9;
             // 
-            // Form1
+            // btnTable
+            // 
+            this.btnTable.Location = new System.Drawing.Point(382, 28);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(152, 23);
+            this.btnTable.TabIndex = 3;
+            this.btnTable.Text = "Xem danh sách table";
+            this.btnTable.UseVisualStyleBackColor = true;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
+            // 
+            // PhanHe1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "PhanHe1";
             this.Text = "Quản trị hệ thống";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -599,26 +525,19 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.TextBox textCrePassword;
+        private System.Windows.Forms.TextBox textCreUsername;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TextBox textRolename;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.TextBox textCrePassword;
-        private System.Windows.Forms.TextBox textCreUsername;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textDropName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textEditUser;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textEditRolename;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textDropRolename;
-        private System.Windows.Forms.TextBox textRolename;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnTable;
     }
 }
 

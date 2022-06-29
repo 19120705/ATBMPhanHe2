@@ -74,6 +74,23 @@
             this.button11 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textGraintCollum1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dataGridViewField = new System.Windows.Forms.DataGridView();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.textRevokeTable1 = new System.Windows.Forms.TextBox();
+            this.textGraintTable1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.dataGridViewCollumPris = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTable = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,6 +102,10 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewField)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollumPris)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -93,6 +114,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(-3, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -153,7 +175,6 @@
             this.textCRepPassword.Size = new System.Drawing.Size(216, 22);
             this.textCRepPassword.TabIndex = 18;
             this.textCRepPassword.UseSystemPasswordChar = true;
-            this.textCRepPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -163,7 +184,6 @@
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "Confirm Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textRepPassword
             // 
@@ -210,6 +230,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Roles";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // button5
             // 
@@ -232,7 +253,7 @@
             // 
             this.textGrant.Location = new System.Drawing.Point(375, 6);
             this.textGrant.Name = "textGrant";
-            this.textGrant.Size = new System.Drawing.Size(100, 22);
+            this.textGrant.Size = new System.Drawing.Size(235, 22);
             this.textGrant.TabIndex = 7;
             // 
             // checkOption
@@ -292,6 +313,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(313, 150);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // dataGridView1
             // 
@@ -404,6 +426,7 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(313, 150);
             this.dataGridView3.TabIndex = 11;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // dataGridView4
             // 
@@ -414,6 +437,7 @@
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(313, 233);
             this.dataGridView4.TabIndex = 10;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // tabPage4
             // 
@@ -554,6 +578,7 @@
             this.dataGridView5.RowTemplate.Height = 24;
             this.dataGridView5.Size = new System.Drawing.Size(313, 150);
             this.dataGridView5.TabIndex = 11;
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // dataGridView6
             // 
@@ -564,6 +589,185 @@
             this.dataGridView6.RowTemplate.Height = 24;
             this.dataGridView6.Size = new System.Drawing.Size(313, 233);
             this.dataGridView6.TabIndex = 10;
+            this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.textGraintCollum1);
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Controls.Add(this.dataGridViewField);
+            this.tabPage5.Controls.Add(this.comboBox3);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.comboBox4);
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.button12);
+            this.tabPage5.Controls.Add(this.textRevokeTable1);
+            this.tabPage5.Controls.Add(this.textGraintTable1);
+            this.tabPage5.Controls.Add(this.label14);
+            this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Controls.Add(this.button13);
+            this.tabPage5.Controls.Add(this.button14);
+            this.tabPage5.Controls.Add(this.dataGridViewCollumPris);
+            this.tabPage5.Controls.Add(this.dataGridViewTable);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(796, 423);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Column Privilleges";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // textGraintCollum1
+            // 
+            this.textGraintCollum1.Location = new System.Drawing.Point(582, 78);
+            this.textGraintCollum1.Name = "textGraintCollum1";
+            this.textGraintCollum1.Size = new System.Drawing.Size(210, 22);
+            this.textGraintCollum1.TabIndex = 69;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(528, 78);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 16);
+            this.label12.TabIndex = 68;
+            this.label12.Text = "Collum";
+            // 
+            // dataGridViewField
+            // 
+            this.dataGridViewField.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewField.Location = new System.Drawing.Point(282, 5);
+            this.dataGridViewField.Name = "dataGridViewField";
+            this.dataGridViewField.RowHeadersWidth = 51;
+            this.dataGridViewField.RowTemplate.Height = 24;
+            this.dataGridViewField.Size = new System.Drawing.Size(240, 233);
+            this.dataGridViewField.TabIndex = 67;
+            this.dataGridViewField.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewField_CellContentClick);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Update",
+            "Insert"});
+            this.comboBox3.Location = new System.Drawing.Point(646, 292);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(146, 24);
+            this.comboBox3.TabIndex = 66;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(528, 295);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.TabIndex = 65;
+            this.label2.Text = "Permission";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Update",
+            "Insert"});
+            this.comboBox4.Location = new System.Drawing.Point(646, 35);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(146, 24);
+            this.comboBox4.TabIndex = 64;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(528, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "Permission";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(531, 215);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 62;
+            this.button12.Text = "Refresh";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // textRevokeTable1
+            // 
+            this.textRevokeTable1.Location = new System.Drawing.Point(570, 260);
+            this.textRevokeTable1.Name = "textRevokeTable1";
+            this.textRevokeTable1.Size = new System.Drawing.Size(222, 22);
+            this.textRevokeTable1.TabIndex = 61;
+            // 
+            // textGraintTable1
+            // 
+            this.textGraintTable1.Location = new System.Drawing.Point(570, 8);
+            this.textGraintTable1.Name = "textGraintTable1";
+            this.textGraintTable1.Size = new System.Drawing.Size(222, 22);
+            this.textGraintTable1.TabIndex = 60;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(528, 267);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 16);
+            this.label14.TabIndex = 59;
+            this.label14.Text = "Table";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(528, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 16);
+            this.label15.TabIndex = 58;
+            this.label15.Text = "Table";
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(531, 349);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 57;
+            this.button13.Text = "Revoke";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(531, 142);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 56;
+            this.button14.Text = "Grant";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // dataGridViewCollumPris
+            // 
+            this.dataGridViewCollumPris.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCollumPris.Location = new System.Drawing.Point(5, 267);
+            this.dataGridViewCollumPris.Name = "dataGridViewCollumPris";
+            this.dataGridViewCollumPris.RowHeadersWidth = 51;
+            this.dataGridViewCollumPris.RowTemplate.Height = 24;
+            this.dataGridViewCollumPris.Size = new System.Drawing.Size(517, 150);
+            this.dataGridViewCollumPris.TabIndex = 55;
+            this.dataGridViewCollumPris.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCollumPris_CellContentClick);
+            // 
+            // dataGridViewTable
+            // 
+            this.dataGridViewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTable.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewTable.Name = "dataGridViewTable";
+            this.dataGridViewTable.RowHeadersWidth = 51;
+            this.dataGridViewTable.RowTemplate.Height = 24;
+            this.dataGridViewTable.Size = new System.Drawing.Size(250, 233);
+            this.dataGridViewTable.TabIndex = 54;
+            this.dataGridViewTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTable_CellContentClick);
             // 
             // EditUser
             // 
@@ -588,6 +792,11 @@
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewField)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollumPris)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -640,5 +849,22 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox textGraintCollum1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridViewField;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.TextBox textRevokeTable1;
+        private System.Windows.Forms.TextBox textGraintTable1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.DataGridView dataGridViewCollumPris;
+        private System.Windows.Forms.DataGridView dataGridViewTable;
     }
 }

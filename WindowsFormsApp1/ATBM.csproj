@@ -82,6 +82,7 @@
     <Compile Include="BENHNHAN.cs" />
     <Compile Include="BUS\BenhNhanBUS.cs" />
     <Compile Include="BUS\CSYTBUS.cs" />
+    <Compile Include="BUS\HeThongBUS.cs" />
     <Compile Include="BUS\HSBABUS.cs" />
     <Compile Include="BUS\HSBA_DVBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
@@ -89,10 +90,41 @@
     <Compile Include="CSYT.cs" />
     <Compile Include="DAO\BenhNhanDAO.cs" />
     <Compile Include="DAO\CSYTDAO.cs" />
+    <Compile Include="DAO\HeThongDAO.cs" />
     <Compile Include="DAO\HSBADAO.cs" />
     <Compile Include="DAO\HSBA_DVDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\XL_DuLieu.cs" />
+    <Compile Include="GUI\BenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BenhNhan.Designer.cs">
+      <DependentUpon>BenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CSYT\CSYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CSYT\CSYT.Designer.cs">
+      <DependentUpon>CSYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CSYT\themHSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CSYT\themHSBA.Designer.cs">
+      <DependentUpon>themHSBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CSYT\themHSBA_DV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CSYT\themHSBA_DV.Designer.cs">
+      <DependentUpon>themHSBA_DV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NghienCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NghienCuu.Designer.cs">
+      <DependentUpon>NghienCuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ThanhTra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +136,12 @@
     </Compile>
     <Compile Include="GUI\tesst.Designer.cs">
       <DependentUpon>tesst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YBacSi.Designer.cs">
+      <DependentUpon>YBacSi.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\DangNhap.cs">
       <SubType>Form</SubType>
@@ -124,11 +162,11 @@
     <Compile Include="HeThong\EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\Form1.cs">
+    <Compile Include="HeThong\PhanHe1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HeThong\PhanHe1.Designer.cs">
+      <DependentUpon>PhanHe1.cs</DependentUpon>
     </Compile>
     <Compile Include="HSBA.cs" />
     <Compile Include="HSBA_DV.cs" />
@@ -136,11 +174,30 @@
     <Compile Include="NHANVIEN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsFormsApp1\GUI\PhanHe1.cs" />
+    <EmbeddedResource Include="GUI\BenhNhan.resx">
+      <DependentUpon>BenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CSYT\CSYT.resx">
+      <DependentUpon>CSYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CSYT\themHSBA.resx">
+      <DependentUpon>themHSBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CSYT\themHSBA_DV.resx">
+      <DependentUpon>themHSBA_DV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NghienCuu.resx">
+      <DependentUpon>NghienCuu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\tesst.resx">
       <DependentUpon>tesst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThanhTra.resx">
       <DependentUpon>ThanhTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YBacSi.resx">
+      <DependentUpon>YBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -151,8 +208,8 @@
     <EmbeddedResource Include="HeThong\EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\PhanHe1.resx">
+      <DependentUpon>PhanHe1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

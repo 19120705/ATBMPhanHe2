@@ -15,6 +15,17 @@ namespace WindowsFormsApp1.DAO
             string sql = "Select * from S_DBA.S_HSBA_DV";
             return dl.LayDuLieu(sql);
         }
+        public DataTable LayDuLieuAtribute(string MAHSBA)//Lay du lieu theo 1 dk là MAHSBA
+        {
+            string sql = "Select * from S_DBA.S_HSBA_DV WHERE MAHSBA = '" + MAHSBA+"'";
+            return dl.LayDuLieu(sql);
+        }
+
+        public DataTable LayDuLieuViewNC()
+        {
+            string sql = "Select * from V_TC5_HSBADV";
+            return dl.LayDuLieu(sql);
+        }
         public int Them(HSBA_DV hsba_dv)
         {
             string sql = string.Format("INSERT INTO S_DBA.S_HSBA_DV(MAHSBA,MADV,NGAY,MAKTV,KETQUA) VALUES ('{0}','{1}',TO_DATE('{2}', 'YYYY-MM-DD'),'{3}','{4}')", hsba_dv.MAHSBA, hsba_dv.MADV, hsba_dv.NGAY, hsba_dv.MAKTV, hsba_dv.KETQUA);
@@ -27,7 +38,7 @@ namespace WindowsFormsApp1.DAO
         }
         public int Xoa(string mahsba, string madv, string ngay)
         {
-            string sql = string.Format("DELETE FROM S_DBA.S_HSBA_DV WHERE MAHSBA = '{0}' AND MADV = '{1}' AND NGAY = TO_DATE('{2}', 'YYYY-MM-DD')", mahsba, madv, ngay);
+            string sql = string.Format("DELETE FROM S_DBA.S_HSBA_DV WHERE MAHSBA = '{0}' AND MADV = '{1}' AND NGAY = TO_DATE('{2}', 'DD/MM/YYYY')", mahsba, madv, ngay);
             return dl.ThucThi(sql);
         }
     }

@@ -15,6 +15,12 @@ namespace WindowsFormsApp1.DAO
             string sql = "Select * from S_DBA.S_HSBA";
             return dl.LayDuLieu(sql);
         }
+
+        public DataTable LayDuLieuViewNC()
+        {
+            string sql = "Select * from V_TC5_HSBA";
+            return dl.LayDuLieu(sql);
+        }
         public int Them(HSBA hsba)
         {
             string sql = string.Format("INSERT INTO S_DBA.S_HSBA(MAHSBA,MABN,NGAY,CHUANDOAN,MABS,MAKHOA,MACSYT,KETLUAN) VALUES ('{0}','{1}',TO_DATE('{2}', 'YYYY-MM-DD'),'{3}','{4}','{5}','{6}','{7}')", hsba.MAHSBA, hsba.MABN, hsba.NGAY, hsba.CHUANDOAN, hsba.MABS, hsba.MAKHOA, hsba.MACSYT, hsba.KETLUAN);
@@ -27,7 +33,7 @@ namespace WindowsFormsApp1.DAO
         }
         public int Xoa(string mahsba)
         {
-            string sql = string.Format("DELETE FROM S_DBA.S_HSBA WHERE MAHSBA = {0}", mahsba);
+            string sql = string.Format("DELETE FROM S_DBA.S_HSBA WHERE MAHSBA = '{0}'", mahsba);
             return dl.ThucThi(sql);
         }
     }

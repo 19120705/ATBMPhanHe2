@@ -15,6 +15,11 @@ namespace WindowsFormsApp1.BUS
         {
             return bnDao.LayDuLieu();
         }
+
+        public DataTable LayDuLieuBenhNhan(string mabn)
+        {
+            return bnDao.LayDuLieuBenhNhan(mabn);
+        }
         public int Them(BENHNHAN bn)
         {
             return bnDao.Them(bn);

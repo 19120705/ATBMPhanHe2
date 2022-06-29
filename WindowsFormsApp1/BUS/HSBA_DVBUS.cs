@@ -15,6 +15,14 @@ namespace WindowsFormsApp1.BUS
         {
             return hsba_dvDao.LayDuLieu();
         }
+        public DataTable LayDuLieuAtribute(string MAHSBA)
+        {
+            return hsba_dvDao.LayDuLieuAtribute(MAHSBA);
+        }
+        public DataTable LayDuLieuViewNC()
+        {
+            return hsba_dvDao.LayDuLieuViewNC();
+        }
         public int Them(HSBA_DV hsba_dv)
         {
             return hsba_dvDao.Them(hsba_dv);

@@ -15,6 +15,11 @@ namespace WindowsFormsApp1.DAO
             string sql = "Select * from S_DBA.S_BENHNHAN";
             return dl.LayDuLieu(sql);
         }
+        public DataTable LayDuLieuBenhNhan(string mabn)
+        {
+            string sql = "Select * from S_DBA.S_BENHNHAN WHERE MABN = '"+mabn+"' or CMND = '"+mabn+"'";
+            return dl.LayDuLieu(sql);
+        }
         public int Them(BENHNHAN bn)
         {
             string sql = string.Format("INSERT INTO S_DBA.S_BENHNHAN(MABN,MACSYT,TENBN,CMND,NGAYSINH,SONHA,TENDUONG,QUANHUYEN,TINHTP,TIENSUBENH,TIENSUBENHGD,DIUNGTHUOC) VALUES ('{0}','{1}','{2}','{3}'TO_DATE('{4}', 'YYYY-MM-DD'),'{5}','{6}','{7}','{8}','{9}','{10}','{11}')", bn.MABN, bn.MACSYT, 
@@ -23,7 +28,7 @@ namespace WindowsFormsApp1.DAO
         }
         public int CapNhat(BENHNHAN bn)
         {
-            string sql = string.Format("UPDATE S_DBA.S_BENHNHAN SET MABN='{0}',MACSYT='{1}',TENBN='{2}',CMND='{3}',NGAYSINH=TO_DATE('{4}', 'YYYY-MM-DD'),SONHA='{5}',TENDUONG='{6}',QUANHUYEN='{7}',TINHTP='{8}',TIENSUBENH='{9}',TIENSUBENHGD='{10}',DIUNGTHUOC='{11}'", bn.MABN, bn.MACSYT,
+            string sql = string.Format("UPDATE S_DBA.S_BENHNHAN SET MACSYT='{0}',TENBN='{1}',CMND='{2}',NGAYSINH=TO_DATE('{3}', 'YYYY-MM-DD'),SONHA='{4}',TENDUONG='{5}',QUANHUYEN='{6}',TINHTP='{7}',TIENSUBENH='{8}',TIENSUBENHGD='{9}',DIUNGTHUOC='{10}'", bn.MACSYT,
                 bn.TENBN, bn.CMND, bn.NGAYSINH, bn.SONHA, bn.TENDUONG, bn.QUANHUYEN, bn.TINHTP, bn.TIENSUBENH, bn.TIENSUBENHGD, bn.DIUNGTHUOC);
             return dl.ThucThi(sql);
         }

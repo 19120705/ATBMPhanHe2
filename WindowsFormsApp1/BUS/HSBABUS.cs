@@ -15,6 +15,10 @@ namespace WindowsFormsApp1.BUS
         {
             return hsbaDao.LayDuLieu();
         }
+        public DataTable LayDuLieuViewNC()
+        {
+            return hsbaDao.LayDuLieuViewNC();
+        }
         public int Them(HSBA hsba)
         {
             return hsbaDao.Them(hsba);

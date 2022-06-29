@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace WindowsFormsApp1.DAO
         public DataTable LayDuLieu()
         {
             string sql = "Select * from S_DBA.S_NHANVIEN";
+            return dl.LayDuLieu(sql);
+        }
+        public DataTable LayVaiTro(string manv)
+        {
+            string sql = "Select VAITRO from S_DBA.S_NHANVIEN where MANV = '" + manv + "'";
             return dl.LayDuLieu(sql);
         }
         public int Them(NHANVIEN nv)
